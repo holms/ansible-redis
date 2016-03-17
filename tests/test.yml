@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  vars:
+    - redis_bind: 10.128.15.177
+
+  roles:
+    - { role: ansible-redis }
